@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alien Abduction</title>
+    <link rel="stylesheet" href="../css/Alien.css">
+    <script src="../js/aliens.js"></script>
+    <style>
+    body{
+        background-image: url("../../../images/SpaceBackground.jpg") ;
+    }
+    </style>
+</head>
+<body>
+    <h1>Alien Interaction | Alex P | Last Edit: 04-15-19</h1>
+    <h3>Interaction Report</h3>
+    <br><hr><br>
+    <!--Class Two Report-->
+    <div>
+        <form id="class2Form" action="../php/class2Submit.php" method="POST">
+            <h3>Class Two:</h3>
+            <p>Did you see a vehicle: </p><input type="radio" name="inVehicle" value="1"><p class="radio">Yes</p><input type="radio" name="inVehicle" value="0"><p class="radio">No</p>
+            <p>What type of vehicle was it:</p><select name="vehicleType" id="vType">
+                        <option value="FL">Flying</option>
+                        <option value="GR">Ground</option>
+                        <option value="SW">Swimming</option>
+                        <option value="NA">N/A</option>
+                    </select>
+            <p>Was there any harm done to you or other people: </p><input type="radio" name="personHarm" value="1"><p class="radio">Yes</p><input type="radio" name="personHarm" value="0"><p class="radio">No</p>
+            <p>Was there any harm done to the environment: </p><input type="radio" name="envHarm" value="1"><p class="radio">Yes</p><input type="radio" name="envHarm" value="0"><p class="radio">No</p>
+            <p>Was there a physical trace left behind: </p><input type="radio" name="trace" value="1"><p class="radio">Yes</p><input type="radio" name="trace" value="0"><p class="radio">No</p>
+            <p>If applicable please describe the trace: </p><textarea name="descTrace" cols="50" rows="10"></textarea>
+            <p>Any additional details go here:</p><textarea name="addDetails" cols="50" rows="10"></textarea>
+            <br><br>
+            <button type="submit" name="submitC1">Submit Report</button>
+        </form>
+    </div>
+</body>
+</html>

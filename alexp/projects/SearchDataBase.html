@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/SearchDatabase.css">
+  <title>Searching Databases</title>
+</head>
+<body>
+  <h1>Searching a database</h1>
+  <h4>By Alex P.</h4>
+  <hr>
+  <p>All searches that are described in this page come from a group database integrated from our class for a vet office</p>
+  <h3>Basic Table Joins</h3>
+  <h4>Simple Join</h4>
+  <pre>
+  SELECT
+    customer.fname, customer.lname, animal.name, animal.species
+  FROM customer
+  INNER JOIN animal
+  ON
+    customer.IDcustomer = animal.IDcustomer
+  WHERE animal.species LIKE 'horse';
+  </pre>
+  <img src="../images/SimpleJoin.png" alt="Simple Join">
+  <h4>Basic table join with ordering</h4>
+  <pre>
+    SELECT
+      customer.fname, customer.lname, animal.name, animal.species
+    FROM customer
+    INNER JOIN animal
+    ON
+      customer.IDcustomer = animal.IDcustomer
+    WHERE animal.species LIKE 'horse'
+    ORDER BY customer.lname ASC;
+  </pre>
+  <img src="../images/SimpleJoinOrdered.png" alt="Ordered Simple">
+  <hr>
+  <h3>More Complex Table Joins</h3>
+  <h4>Table join with named columns and multiple WHERE statements</h4>
+  <pre>
+    SELECT
+        customer.fname AS 'Customer First Name',
+        customer.lname AS 'Customer Last Name',
+        animal.name AS 'Pet Name',
+        animal.species,
+        animal.yearBorn,
+        animal.gender
+    FROM
+        customer
+    INNER JOIN
+        animal
+    ON
+        customer.IDcustomer= animal.IDcustomer
+    WHERE
+        customer.state LIKE 'id'
+        AND animal.gender LIKE 'f'
+        AND animal.yearBorn < 2008
+        AND animal.species LIKE 'cat'
+
+        OR animal.species LIKE 'dog'
+    ORDER BY
+        animal.species ASC;
+  </pre>
+  <img src="../images/ComplexJoin.png" alt="Complex Join">
+  <hr>
+  <h3>Three Table Joins</h3>
+  <p>This is how a 3 table join is done and this method can be extrapolated to any number of tables</p>
+  <h4>Basic three table join</h4>
+  <pre>
+    SELECT customer.lname, animal.species, diagnosis.diagnosis
+    FROM ((customer
+    INNER JOIN animal ON customer.IDcustomer = animal.IDcustomer)
+    INNER JOIN diagnosis ON animal.IDanimal = diagnosis.IDanimal);
+  </pre>
+  <img src="../images/Simple3Table.png" alt="Simple 3 Table">
+  <h4>Three table join with WHERE statement</h4>
+  <pre>
+    SELECT customer.lname, animal.species, diagnosis.diagnosis
+    FROM ((customer
+    INNER JOIN animal ON customer.IDcustomer = animal.IDcustomer)
+    INNER JOIN diagnosis ON animal.IDanimal = diagnosis.IDanimal)
+    WHERE species LIKE 'dog';
+  </pre>
+  <img src="../images/3TableWhere.png" alt="3 Table Where">
+  <h4>Three table with multiple WHERE statements</h4>
+  <pre>
+    SELECT customer.lname, animal.species, diagnosis.diagnosis
+    FROM ((customer
+    INNER JOIN animal ON customer.IDcustomer = animal.IDcustomer)s
+    INNER JOIN diagnosis ON animal.IDanimal = diagnosis.IDanimal)
+    WHERE animal.species LIKE 'dog' AND animal.gender LIKE 'f';
+  </pre>
+  <img src="../images/3TableMultiWhere.png" alt="3 Table Multi Where">
+  <hr>
+  <h3>ERD</h3>
+  <p>Additionally an ERD was created for this database</p>
+  <img src="../images/VetOfficeERD.png" alt="Vet Office ERD">
+</body>
+</html>

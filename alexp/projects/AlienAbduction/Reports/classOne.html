@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alien Abduction</title>
+    <link rel="stylesheet" href="../css/Alien.css">
+    <script src="../js/aliens.js"></script>
+    <style>
+    body{
+        background-image: url("../../../images/SpaceBackground.jpg") ;
+    }
+    </style>
+</head>
+<body>
+    <h1>Alien Interaction | Alex P | Last Edit: 04-15-19</h1>
+    <h3>Interaction Report</h3>
+    <br><hr><br>
+    <!--Class One-->
+    <div>
+        <form id="class1Form" action="../php/class1Submit.php" method="POST">
+            <h3>Class One:</h3>
+            <p>Did you see a vehicle: </p><input type="radio" name="inVehicle" value="1"><p class="radio">Yes</p><input type="radio" name="inVehicle" value="0"><p class="radio">No</p>
+            <p>What type of vehicle was it:</p><select name="vehicleType" id="vType">
+                    <option value="FL">Flying</option>
+                    <option value="GR">Ground</option>
+                    <option value="SW">Swimming</option>
+                    <option value="NA">N/A</option>
+                </select>
+            <p>Additional details about the vehicle</p><textarea name="addDetails" id="Details" cols="50" rows="10"></textarea>
+            <br><br>
+            <button type="submit" name="submitC1">Submit Report</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alien Abduction</title>
+    <link rel="stylesheet" href="../css/Alien.css">
+    <script src="../js/aliens.js"></script>
+    <style>
+    body{
+        background-image: url("../../../images/SpaceBackground.jpg") ;
+    }
+    </style>
+</head>
+<body>
+    <h1>Alien Interaction | Alex P | Last Edit: 04-15-19</h1>
+    <h3>Interaction Report</h3>
+    <br><hr><br>
+         <!--Incident Report-->
+    <div>
+        <form action="../php/incidentSubmit.php" method="POST" id="incidentRep">
+            <h3>Incident Report:</h3>
+            <p>Date of Occurance: </p><input type="date" name="date">
+            <p>Occurance Street Address: </p><input type="text" name="street">
+            <p>Occurance City: </p><input type="text" name="city">
+            <p>Occurance State: </p><select name ="state">
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+            </select>
+            <p>Occurance Zip Code: </p><input type="text" name="zip">
+            <p>Occurance Country: </p><input type="text" name="country">
+            <p>Class of Encounter: </p><select name="class">
+                                        <option value="1">Class 1: Object of alien origin seen</option>
+                                        <option value="2">Class 2: Physical effect is observed</option>
+                                        <option value="3">Class 3: An animated creature is seen</option>
+                                        </select>
+            <p>Threat of Encounter: </p><select name="threat">
+                                        <option value="h">Hostile</option>
+                                        <option value="f">Friendly</option>
+                                        <option value="n">Neutral</option>
+                                        </select>
+            <p>Corroborated: </p><input type="radio" name="corr" value="1"><p class="radio">True</p> <input type="radio" name="corr" value="0"><p class="radio">False</p>
+            <p>Were you administered any form of drugs within 48hrs of the sighting:</p><input type="radio" name="drugs" value="1"><p class="radio">Yes</p> <input type="radio" name="drugs" value="0"><p class="radio">No</p>
+            <br><br>
+            <button type="submit" name="submitIR">Submit Report</button>
+        </form>
+    </div>
+</body>
+</html>

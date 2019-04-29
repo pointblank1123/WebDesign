@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/homepage.js"></script>
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Ruda|Indie+Flower" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <title>Homepage Alex P</title>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="header">
+      <h3>Computer Science Portfolio</h3>
+      <h6>By: Alex P.</h6>
+      <h6>Last Updated: 02-11-19</h6>
+      <div class="w3-sidebar w3-bar-block w3-border-right " style="display:none" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large w3-red">Close &times;</button>
+          <a href="https://www.westada.org" class="w3-bar-item w3-button">Westada Schools</a>
+          <a href="https://www.westada.org/chs"  class="w3-bar-item w3-button">Centennial High</a>
+        </div>
+      <button class="w3-button w3-xlarge hamlink" onclick="w3_open()">
+        <div class="hamburger layer1"></div>
+        <div class="hamburger layer2"></div>
+        <div class="hamburger layer1"></div>
+      </button>
+    </div>
+    <div class="DataDevMenu">
+      <img src="images/Logo/logo_centennial-04.png" class="CHSLogo" alt="Cen10 Logo">
+      <p class="CHSCaption">Centennial High</p>
+      <br><br>
+      <h4>Database Design Links:</h4>
+
+      <h5 id="p11Dropdown">P11. Alien Abduction Form &#9662;</h5>
+      <p class="p11DropdownContent">Site grouping for running an online DB.</p>
+      <p class="p11DropdownContent">For this project I worked with <a href="http://www.westada.tech/a4/connorh">Connor H.</a> and <a href="http://www.westada.tech/a4/miked">Mike D.</a></p>
+      <button class="p11DropdownContent" onclick="location.href='projects/AlienAbduction/abductionForm.html'">Click Here</button>
+
+      <h5 id="p10Dropdown">P10. DB Menu &#9662;</h5>
+      <p class="p10DropdownContent">Site grouping for running an online DB.</p>
+      <p class="p10DropdownContent">For this project I worked with <a href="http://www.westada.tech/a4/connorh">Connor H.</a> and <a href="http://www.westada.tech/a4/miked">Mike D.</a></p>
+      <button class="p10DropdownContent" onclick="location.href='projects/OnlineDB/DBMenu.html'">Click Here</button>
+
+      <h5 id="p9Dropdown">P9. PHP Read DB &#9662;</h5>
+      <p class="p9DropdownContent">First project reading a database from the server to client side.</p>
+      <p class="p9DropdownContent">For this project I worked with <a href="http://www.westada.tech/a4/connorh">Connor H.</a> and <a href="http://www.westada.tech/a4/miked">Mike D.</a></p>
+      <button class="p9DropdownContent" onclick="location.href='projects/readDB/index.php'">Click Here</button>
+
+      <h5 id="p8Dropdown">P8. PHP Superglobals &#9662;</h5>
+      <p class="p8DropdownContent">Our first project working with PHP superglobals and client server dialogue.</p>
+      <p class="p8DropdownContent">I worked with <a href="http://www.westada.tech/a4/miked">Mike D.</a> and <a href="http://www.westada.tech/a4/calebp">Caleb P.</a> for this project.</p>
+      <button class="p8DropdownContent" onclick="location.href='projects/phpsuperglobals/index.php'">Click Here</button>
+
+      <h5 id="p7Dropdown">P7. PHP Debugging &#9662;</h5>
+      <p class="p7DropdownContent">This project details debugging PHP including how to find the error log in apache2 and displaying errors on the page itself, click <a href="projects/PHPdebug/index.php">here</a></p>
+      <p class="p7DropdownContent">I worked with <a href="http://www.westada.tech/a4/miked">Mike D.</a> and <a href="http://www.westada.tech/a4/calebp">Caleb P.</a> for this project.</p>
+      <button class="p7DropdownContent" onclick="location.href='projects/PHPdebug/index.php'">Click Here</button>
+
+      <h5 id="p6Dropdown">P6. PHP Query Page &#9662;</h5>
+      <p class="p6DropdownContent">This project details querying php databases and displaying them on a page, click <a href="projects/PHPquery/index.php">here</a></p>
+      <p class="p6DropdownContent">I was able to work with <a href="http://www.westada.tech/a4/miked">Mike D.</a> and <a href="http://www.westada.tech/a4/calebp">Caleb P.</a> on this project.</p>
+      <button class="p6DropdownContent" onclick="location.href='projects/PHPquery/index.php'">Click Here</button>
+
+      <h5 id="p5Dropdown">P5. First PHP script page &#9662;</h5>
+      <p class="p5DropdownContent">This project details the basics of php and my first php scripts click <a href="projects/LearnPHP/index.php">here</a></p>
+      <p class="p5DropdownContent">For this project I worked with <a href="http://www.westada.tech/a4/connorh">Connor H.</a>, <a href="http://www.westada.tech/a4/miked">Mike D.</a> and <a href="http://www.westada.tech/a4/calebp">Caleb P.</a></p>
+      <button class="p5DropdownContent" onclick="location.href='projects/LearnPHP/index.php'">Click Here</button>
+
+      <h5 id="p4Dropdown">P4. This is the process for using a database &#9662;</h5>
+      <p class="p4DropdownContent">This project shows how to search tables in a database click <a href="projects/SearchDataBase.html">here</a></p>
+      <p class="p4DropdownContent">In this project I worked with my entire class in order to make a large database.</p>
+      <p class="p4DropdownContent">I was able, however to work closely with <a href="http://www.westada.tech/a4/connorh">Connor H.</a> and <a href="http://www.westada.tech/a4/miked">Mike D.</a></p>
+      <button class="p4DropdownContent" onclick="location.href='projects/SearchDataBase.html'">Click Here</button>
+      
+      <h5 id="p3Dropdown">P3. SQL creating and editing a database &#9662;</h5>
+      <p class="p3DropdownContent">My database creation site learning about creating and editing a DB.</p>
+      <p class="p3DropdownContent">On this Project I worked with <a href="http://www.westada.tech/a4/connorh">Connor H.</a> and <a href="http://www.westada.tech/a4/miked">Mike D.</a></p>
+      <button class="p3DropdownContent" onclick="location.href='projects/SQLFirstDB.html'">Click Here</button>
+
+      <h5 id="p2Dropdown">P2. Creating a Portfolio of all my projects &#9662;</h5>
+      <p class="p2DropdownContent">This site is the one you are on right now. I know right, No way!</p>
+      <p class="p2DropdownContent">I worked with <a href="http://www.westada.tech/a4/connorh">Connor H.</a>, <a href="http://www.westada.tech/a4/miked">Mike D.</a> and <a href="http://www.westada.tech/a4/calebp">Caleb P.</a> on this project</p>
+
+      <h5 id="p1Dropdown">P1. Creating a VM &#9662;</h5>
+      <p class="p1DropdownContent">This is a site on how to create a VM</p>
+      <p class="p1DropdownContent">I was able to work with <a href="http://www.westada.tech/a4/connorh">Connor H</a>, <a href="http://www.westada.tech/a4/miked">Mike D.</a> and <a href="http://www.westada.tech/a4/calebp">Caleb P.</a> on this</p>
+      <button class="p1DropdownContent" onclick="location.href='projects/HowtoVM.html'">Click Here</button>
+
+    </div>
+    <div class="JavaMenu">
+      <img src="images/Logo/WestAda-09.png" class="wasdLogo" alt="Westada logo">
+      <p class="wasdCaption">Westada Schools</p>
+      <br>
+      <h4>Java Projects</h4>
+      <h5 id="jars">&#9662; Jar Variant</h5>
+      <p class="jarDropdown"></p>
+      <h5 id="source">&#9662; Source Code</h5>
+      <p class="sourceDropdown"></p>
+    </div>
+    <div class="footer">
+      <h5>For more information...</h5>
+      <p><a href="http://www.w3schools.com" target="_blank">W3Schools.</a> This website is great for the basic principles of HTML, CSS, JavaScript, SQL, PHP, etc.</p>
+      <p><a href="http://www.stackoverflow.com" target="_blank">Stack Overflow.</a> This is one of my favorite sites when I don't know how to do something.</p>
+      <img src="images/Logo/BoiseStateLogo.png" alt="Boise State University" id="BSUlogo">
+    </div>
+  </div>
+</body>
+</html>

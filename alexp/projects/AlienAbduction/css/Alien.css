@@ -1,0 +1,47 @@
+body{
+    background: linear-gradient(45deg,#378133, #25b91f, #7a2aa0);
+    background-attachment: fixed;
+}
+p, label{
+    color:#FFFFFF;
+}
+.type{
+    box-shadow: inherit;
+}
+h1, h3{
+    color:white;
+}
+input, textarea, select{
+    background-color:rgb(163, 155, 155);
+    border:outset 2px #ac4e37;
+}
+button{
+    background:linear-gradient(#c41321,#237faa);
+    height:50px;
+    width:200px;
+    margin:5px;
+    color:#FFFFFF;
+}
+input:hover , textarea:hover, button:hover, select:hover{
+    background-color:#3275cc;
+    border: double 5px #247e18;
+}
+.radio{
+    color:white;
+    display:inline;
+}
+#incidentRep , #class1Form , #class2Form , #class3Form{
+    display:block;
+}
+div{
+    margin:auto;
+    background-color:rgba(32, 32, 136, 0.445);
+    width:50%;
+    border: 5px outset #1277bbb6;
+}
+form{
+    margin:5px;
+}
+input,select{
+    width: 300px;
+}

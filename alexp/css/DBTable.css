@@ -1,0 +1,18 @@
+body{
+  background:linear-gradient(#000000,#0f9b0f);
+  text-align: center;
+}
+p, h1, h2, h3, h4, h5, h6, a{
+  font-family: 'Roboto Mono', monospace;
+  text-shadow: 2px 2px 1px #999;
+}
+.colorChange{
+  color:white;
+}
+img{
+  box-Shadow:5px 5px 2px #999;
+  border: ridge 4px #bb450b
+}
+hr{
+  border:inset 3px rgb(22, 142, 116);
+}
