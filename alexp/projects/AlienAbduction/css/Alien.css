@@ -45,3 +45,10 @@ form{
 input,select{
     width: 300px;
 }
+td, th{
+    border-left: 2px solid #FFFFFF; 
+    color:#FFFFFF
+}
+th{
+    border-bottom:3px outset #FFFFFF
+}

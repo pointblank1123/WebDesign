@@ -1,3 +1,7 @@
+<?php
+    require '../php/alienDBconn.php';
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +22,6 @@
     <br><hr><br>
     <div>
     <?php
-        require '../php/alienDBconn.php';
-        session_start();
         $sql = "SELECT * FROM incidentReport WHERE IDpersonal = 2";
         $res = $conn->query($sql) or die($conn->error);
         if($res->num_rows > 0){

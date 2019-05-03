@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    require 'php/alienDBconn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alien Abduction</title>
     <link rel="stylesheet" href="css/Alien.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/aliens.js"></script>
     <style>
     body{
@@ -14,7 +19,7 @@
     </style>
 </head>
 <body>
-    <h1>Search Aliens DB | Alex P. | Last Edit 04-25-19</h1>
+    <h1>Search Aliens DB | Alex P. | Last Edit 05-03-19</h1>
     <br><hr><br>
     <div>
         <form action="php/searchDB.php" method="POST">
@@ -27,15 +32,13 @@
         <div id="searchReturn">
             <h1>Results</h1>
             <hr><br>
+            <table><tr><th>ID</th><th>Name</th><th>Date of Birth</th><th>Email</th></td></tr>
             <?php
-                require 'php/alienDBconn.php';
-                session_start();
                 $sql = $_SESSION['sql'];
                 $res = $conn->query($sql) or die($conn->error);
                 if($res->num_rows > 0){
-                    echo "<table style='color:white'><tr><th>ID</th><th>Name</th><th>Date of Birth</th><th>Email</th></td></tr>";
                     while($row = $res->fetch_assoc()){
-                        echo '<tr><td id=1>' . $row['IDpersonal'].'</td>'.
+                        echo "<tr><td>" . $row['IDpersonal'].'</td>'.
                         '<td>' . $row['fname'] . ' ' . $row['lname'] . '</td>'.
                         '<td>'.$row['dayBirth'].'/'.$row['monthBirth'].'/'.$row['yearBirth'].'</td>'.
                         '<td>'.$row['email'].'</td></tr>';

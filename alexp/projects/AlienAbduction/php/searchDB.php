@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require 'alienDBconn.php';
     $id = $_POST['id'];
     $fname = $_POST['fname'];
@@ -26,7 +27,6 @@
     //$sql = "SELECT * FROM personalInformation WHERE IDpersonal=$id";
     echo $sql;
     //$res = $conn->query($sql) or die($conn->error);
-    session_start();
     $_SESSION['sql']= $sql;
     /*
     if($res->num_rows > 0){
@@ -48,4 +48,3 @@
          */
     $conn->close();
     header("location: ../search.php");
-?>
