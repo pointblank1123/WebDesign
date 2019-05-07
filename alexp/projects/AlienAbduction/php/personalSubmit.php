@@ -1,4 +1,5 @@
-<?php
+<?php  
+    session_start();
     require 'alienDBconn.php';
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
@@ -15,7 +16,6 @@
         VALUES('$fname','$lname','$bDay','$bMonth','$bYear','$email','$phone','$hAdd','$hCity','$hState','$hZip','$hCountry')";
 
     $conn->query($sql);
-    session_start();
     $search = "SELECT * FROM personalInformation WHERE fname='$fname'";
     $res = $conn->query($search);
     $row = $res->fetch_assoc();

@@ -1,6 +1,6 @@
 <?php
-    require 'php/alienDBconn.php';
     session_start();
+    require 'php/alienDBconn.php';
     $sql = $_SESSION['sql'];
     $res = $conn->query($sql);
     $row = $res->fetch_assoc();

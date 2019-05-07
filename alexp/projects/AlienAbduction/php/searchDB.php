@@ -25,7 +25,7 @@
     }
     $sql = "SELECT IDpersonal, fname, lname, dayBirth, monthBirth, yearBirth, email FROM personalInformation WHERE ".$searchTerm.";";
     //$sql = "SELECT * FROM personalInformation WHERE IDpersonal=$id";
-    echo $sql;
+    //echo $sql;
     //$res = $conn->query($sql) or die($conn->error);
     $_SESSION['sql']= $sql;
     /*

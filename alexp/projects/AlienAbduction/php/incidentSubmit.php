@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require 'alienDBconn.php';
     $date = $_POST['date'];
     $street = $_POST['street'];
@@ -11,7 +12,6 @@
     $corr = $_POST['corr'];
     $onDrugs = $_POST['drugs'];
     list($year,$day,$month) = explode('-',$date,4);
-    session_start();
     $id = $_SESSION['id'];
     //echo $id;
     $sql = "INSERT INTO incidentReport(dayOccur, monthOccur, yearOccur, streetOccur, cityOccur, stateOccur, zipOccur, countryOccur, classEncounter, threatEncounter, corroborated, usingPsychedelics, IDpersonal)
@@ -23,6 +23,7 @@
     $row = $res->fetch_assoc();
     $idrep=$row['IDreport'];
     $_SESSION['idrep']=$idrep;
+    /*
     if($class == 1){
         header("location: ../Reports/classOne.html");
     }
@@ -32,5 +33,6 @@
     elseif($class == 3){
         header("location: ../Reports/classThree.html");
     }
+    */
     $conn->close();
 ?>
