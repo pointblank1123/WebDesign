@@ -1,6 +1,54 @@
 body{
-    background: linear-gradient(#659999,#f4791f);
+    background: linear-gradient(#ebf0f0,#c5c4c4);
     background-attachment:fixed;
     height: 100vh;
     width: 100vw;
+}
+input{
+    padding:2px;
+    border:inset #7a7373 2px;
+    border-radius:3px;
+    margin:2px;
+    background-color: #ece3e3;
+}
+nav{
+    background:linear-gradient(#FFFFFF, #b9b3b3);
+    padding:10px;
+}
+.navbar{
+    display:inline;
+}
+a{
+    padding: 10px;
+    margin: 5px;
+    text-decoration:none;
+    color:#000000;
+}
+a:hover{
+    background-color:#beb3b37c;
+}
+h1, li, {
+    font-size: 1.5em;
+}
+.signIn{
+    float:right;
+    margin-right:20px; 
+}
+.signUp{
+    background: linear-gradient(#659999,#f4791f);
+    margin:auto;
+    width: 50%;
+    text-align:center;
+    border: ridge 5px #f4791f;
+    margin-top:1%;
+}
+.main-content{
+    background: linear-gradient(#659999,#f4791f);
+    width: 75%;
+    margin: auto;
+    border: solid 2px #000000;
+    border-radius: 3px;
+    box-shadow:5px 5px 3px #2e2d2d80;
+    margin-top:1%;
+    height: 75%
 }

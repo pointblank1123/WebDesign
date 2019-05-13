@@ -9,26 +9,26 @@
 </head>
 <body>
     <header>
-        <h1>PHP Login System | Alex P. | Last Edit 05-03-19</h1>
         <nav>
-            <a href="">
-                <img src="../../images/Logo/WestAda-09.png" alt="Westada Logo">
+           <a href="" class="navbar">
+                <img src="../../images/Logo/WestAda-10.png" alt="Westada Logo">
             </a>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">Contact</a></li>
+            <h1 class="navbar">PHP Login System | Alex P. | Last Edit 05-03-19</h1>
+            <ul class="navbar">
+                <li class="navbar"><a href="index.php">Home</a></li>
+                <li class="navbar"><a href="#">Portfolio</a></li>
+                <li class="navbar"><a href="#">About Me</a></li>
+                <li class="navbar"><a href="#">Contact</a></li>
             </ul>
-            <div>
-                <form action="includes/login.inc.php" method = "post">
+            <div class="navbar signIn">
+                <form action="includes/login.inc.php" method = "post" class="navbar">
                     <input type="text" name="mailuid" placeholder="Username/E-mail">
                     <input type="password" name="pwd" placeholder="Password">
                     <button type="submit" name="login-submit">Login</button>
                 </form>
-                <a href="signup.php">Signup</a>
-                <form action="include/logout.inc.php" method="post">
-                    <button type="submit" name="logout-submit">Logout</button>
+                <button onclick="location.href='signup.php'">Signup</button>
+                <form action="include/logout.inc.php" method="post" class="navbar">
+                    <button type="submit" name="logout-submit" >Logout</button>
                 </form>
             </div>
         </nav>
