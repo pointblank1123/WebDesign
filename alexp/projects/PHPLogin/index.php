@@ -4,8 +4,13 @@
 
     <main>
         <div class="main-content">
-            <p>You are logged out</p>
-            <p>You are logged in</p>
+            <?php
+            if(isset($_SESSION['userId'])){ // checking login status if logged in show logged in page else show logged out
+                echo'<p>You are logged in</p>';
+            }else{
+                echo '<p>You are logged out</p>';
+            }
+            ?>
         </div>
     </main>
 

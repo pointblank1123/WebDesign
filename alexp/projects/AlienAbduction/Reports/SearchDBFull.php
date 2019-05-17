@@ -18,28 +18,34 @@
     </style>
 </head>
 <body>
-    <h1>Search Aliens DB | Alex P. | Last Edit 04-25-19</h1>
+    <h1>Search Aliens DB | Alex P. | Last Edit 05-17-19</h1>
     <br><hr><br>
-    <div>
+    <div class="searchReturn">
     <?php
-        $sql = "SELECT * FROM incidentReport WHERE IDpersonal = 2";
-        $res = $conn->query($sql) or die($conn->error);
+
+        $sql = $_SESSION['sql2'];
+        $res = $conn->query($sql);
         if($res->num_rows > 0){
             echo "<table style='color:white'><tr><th>ID</th><th>Occurance Date</th><th>Address of Occurance</th><th>Encounter Class</th><th>Encounter Threat</th><th>Corroborated</th><th>Drug Activites</th></tr>";
             while($row = $res->fetch_assoc()){
-                echo '<tr><td>' . $row['IDreport'].'</td>'.
+                echo '<form action="php/expandReport.php" method="POST" class="resultForm">'.
+                '<tr><td>'. $row['IDreport'].'</td>'.
                 '<td>'.$row['dayOccur'].'/'.$row['monthOccur'].'/'.$row['yearOccur'].'</td>'.
                 '<td>'.$row['streetOccur'].' '.$row['cityOccur'].' '.$row['stateOccur'].' '.$row['zipOccur'].' '.$row['countryOccur'].'</td>'.
                 '<td>'.$row['classEncounter'].' '.'</td>'.
                 '<td>'.$row['threatEncounter'].' '.'</td>'.
                 '<td>'.$row['corroborated'].' '.'</td>'.
-                '<td>'.$row['usingPsychedelics'].' '.'</td></tr>';        
+                '<td>'.$row['usingPsychedelics'].' '.'</td>'.
+                '<input type="hidden" name="repSelected" value="'.$row['IDpersonal'].'">'.
+                '<input type="hidden" name="class" value="'.$row['classEncounter'].'">'.
+                '<td><button type="submit" class="expandBtn">expand</button></td></tr>';  
             }
             echo '</table>';
             }
         else{
             echo 'No Results';
         };
+
     ?>
     </div>
 </body>

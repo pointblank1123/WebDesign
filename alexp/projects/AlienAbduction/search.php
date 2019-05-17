@@ -19,7 +19,7 @@
     </style>
 </head>
 <body>
-    <h1>Search Aliens DB | Alex P. | Last Edit 05-03-19</h1>
+    <h1>Search Aliens DB | Alex P. | Last Edit 05-17-19</h1>
     <br><hr><br>
     <div>
         <form action="php/searchDB.php" method="POST">
@@ -29,7 +29,7 @@
             <br>
             <button type="submit">Search</button>
         </form>
-        <div id="searchReturn">
+        <div class="searchReturn">
             <h1>Results</h1>
             <hr><br>
             <table><tr><th>ID</th><th>Name</th><th>Date of Birth</th><th>Email</th></td></tr>
@@ -38,10 +38,13 @@
                 $res = $conn->query($sql) or die($conn->error);
                 if($res->num_rows > 0){
                     while($row = $res->fetch_assoc()){
-                        echo "<tr><td>" . $row['IDpersonal'].'</td>'.
+                        echo '<form action="php/expandPerson.php" method="POST" class="resultForm">'.
+                        '<tr><td>'. $row['IDpersonal'].'</td>'.
                         '<td>' . $row['fname'] . ' ' . $row['lname'] . '</td>'.
                         '<td>'.$row['dayBirth'].'/'.$row['monthBirth'].'/'.$row['yearBirth'].'</td>'.
-                        '<td>'.$row['email'].'</td></tr>';
+                        '<td>'.$row['email'].'</td>'.
+                        '<input type="hidden" name="selected" value="'.$row['IDpersonal'].'">'.
+                        '<td><button type="submit" class="expandBtn">expand</button></td></tr></form>';
                     }
                     echo '</table>';
                     }

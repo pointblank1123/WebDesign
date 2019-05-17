@@ -52,3 +52,15 @@ td, th{
 th{
     border-bottom:3px outset #FFFFFF
 }
+.expandBtn{
+    padding:1px;
+    height: 20px;
+    width: 70px;
+    margin:5px;
+}
+.searchReturn{
+    width: 75%;
+}
+.resultForm{
+    display:inline;
+}

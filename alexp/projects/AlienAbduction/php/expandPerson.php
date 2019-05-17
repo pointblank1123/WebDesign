@@ -1,14 +1,11 @@
 <?php
     session_start();
-    require 'php/alienDBconn.php';
-    $sql = $_SESSION['sql'];
-    $res = $conn->query($sql);
-    $row = $res->fetch_assoc();
-    $id = $row['IDpersonal'];
+    require 'alienDBconn.php';
+    $id = $_POST['selected'];
 
-    $sql = "SELECT * FROM incidentReport WHERE IDpersonal = $id";
-    $res = $conn->query($sql);
-    $_SESSION['res'] = $res;
+    $sql = "SELECT * FROM incidentReport WHERE IDpersonal = $id;";
+    //echo $sql;
+    $_SESSION['sql2'] = $sql;
 
     //$repID = $row['IDreport'];
     /*
