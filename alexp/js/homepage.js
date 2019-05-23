@@ -18,6 +18,7 @@ $(document).ready(function(){
   $(".p10DropdownContent").hide();
   $(".p11DropdownContent").hide();
   $(".p12DropdownContent").hide();
+  $(".p13DropdownContent").hide();
   $(".jarDropdown").hide();
   $(".sourceDropdown").hide();
 
@@ -56,6 +57,9 @@ $(document).ready(function(){
   });
   $("#p12Dropdown").click(function(){
     $(".p12DropdownContent").toggle(2000);
+  });
+  $("#p13Dropdown").click(function(){
+    $(".p13DropdownContent").toggle(2000);
   });
 
   $("#jars").click(function(){

@@ -28,7 +28,7 @@
         if($res->num_rows > 0){
             echo "<table style='color:white'><tr><th>ID</th><th>Occurance Date</th><th>Address of Occurance</th><th>Encounter Class</th><th>Encounter Threat</th><th>Corroborated</th><th>Drug Activites</th></tr>";
             while($row = $res->fetch_assoc()){
-                echo '<form action="php/expandReport.php" method="POST" class="resultForm">'.
+                echo '<form action="../php/expandReport.php" method="POST" class="resultForm">'.
                 '<tr><td>'. $row['IDreport'].'</td>'.
                 '<td>'.$row['dayOccur'].'/'.$row['monthOccur'].'/'.$row['yearOccur'].'</td>'.
                 '<td>'.$row['streetOccur'].' '.$row['cityOccur'].' '.$row['stateOccur'].' '.$row['zipOccur'].' '.$row['countryOccur'].'</td>'.
@@ -36,9 +36,9 @@
                 '<td>'.$row['threatEncounter'].' '.'</td>'.
                 '<td>'.$row['corroborated'].' '.'</td>'.
                 '<td>'.$row['usingPsychedelics'].' '.'</td>'.
-                '<input type="hidden" name="repSelected" value="'.$row['IDpersonal'].'">'.
+                '<input type="hidden" name="repSelected" value="'.$row['IDreport'].'">'.
                 '<input type="hidden" name="class" value="'.$row['classEncounter'].'">'.
-                '<td><button type="submit" class="expandBtn">expand</button></td></tr>';  
+                '<td><button type="submit" class="expandBtn">expand</button></td></tr></form>';  
             }
             echo '</table>';
             }
