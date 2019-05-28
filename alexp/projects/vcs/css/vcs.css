@@ -1,3 +1,19 @@
+.gitCommands{
+    padding: 5px;
+    margin-bottom: 20px;
+}
 body{
-
+    overflow-x:hidden;
+}
+.commandsTable{
+    margin:auto;
+    border-collapse:collapse;
+}
+td{
+    border-left:ridge 5px #3d6772;
+}
+tr{
+    border-right:ridge 5px #3d6772;
+    border-top:ridge 5px #3d6772;
+    border-bottom: ridge 5px #3d6772;
 }
